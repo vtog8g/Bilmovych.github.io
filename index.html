@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TODO App</title>
+  <link rel="stylesheet" type="text/css" href="./styles.css" />
+</head>
+<body>
+  <div class="container center">
+    <h1 class="title">My TODO App</h1>
+    <div class="controls">
+      <span>Item count: <span id="item-count">0</span></span>
+      <span>Unchecked count: <span id="unchecked-count">0</span></span>
+    </div>
+    <div class="input-container">
+      <input type="text" id="new-todo-title" placeholder="Enter TODO title" onkeydown="handleKeyPress(event)">
+      <button class="button" onclick="newTodo()">New TODO</button>
+    </div>
+    <ul id="todo-list" class="todo-list"></ul>
+    <button class="button" onclick="saveToLocalStorage()">Save to Local Storage</button>
+    <button class="button" onclick="loadFromLocalStorage()">Load from Local Storage</button>
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>
